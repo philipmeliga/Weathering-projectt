@@ -19,7 +19,7 @@ async function getWeatherData(cityValue) {
     );
 
     if (!response.ok) {
-      throw new Error("Network response was not ok");
+      throw new Error("Network problem!");
     }
 
     const data = await response.json();
@@ -51,7 +51,7 @@ async function getWeatherData(cityValue) {
     weatherDataEl.querySelector(".icon").innerHTML = "";
     weatherDataEl.querySelector(".temperature").textContent = "";
     weatherDataEl.querySelector(".description").textContent =
-      "An error happened, please try again later";
+      "City name not found, check the spelling!";
 
     weatherDataEl.querySelector(".details").innerHTML = "";
   }
