@@ -6,7 +6,7 @@ const cityInputEl = document.getElementById("city-input");
 
 const formEl = document.querySelector("form");
 
-formEl.addEventListener("submit", (event) => {
+formEl.addEventListener("click", (event) => {
   event.preventDefault();
   const cityValue = cityInputEl.value;
   getWeatherData(cityValue);
